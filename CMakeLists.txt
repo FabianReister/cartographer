@@ -120,7 +120,8 @@ if (NOT ${BUILD_PROMETHEUS})
 endif()
 set(INSTALL_SOURCE_HDRS ${ALL_LIBRARY_HDRS} ${TEST_LIBRARY_HDRS})
 file(GLOB_RECURSE INTERNAL_HDRS "cartographer/*/internal/*.h")
-list(REMOVE_ITEM INSTALL_SOURCE_HDRS ${INTERNAL_HDRS})
+# also install internal headers
+# list(REMOVE_ITEM INSTALL_SOURCE_HDRS ${INTERNAL_HDRS})
 
 file(GLOB_RECURSE ALL_PROTOS "cartographer/*.proto")
 file(GLOB_RECURSE ALL_GRPC_SERVICES "cartographer/*_service.proto")
