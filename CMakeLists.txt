@@ -388,3 +388,17 @@ install(
   FILES ${PROJECT_BINARY_DIR}/cmake/cartographer/cartographer-config.cmake
   DESTINATION share/cartographer/
 )
+
+# CPack debian package generation (target 'package')
+set(CPACK_PACKAGE_NAME "cartographer-h2t")
+set(CPACK_RPM_PACKAGE_GROUP "cartographer-h2t")
+set(CPACK_PACKAGE_VENDOR "cartographer-h2t")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "H2T")
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_DEPENDS "absl-h2t")
+
+include(CPack)
+
+
+
+
