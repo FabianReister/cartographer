@@ -389,6 +389,13 @@ install(
   DESTINATION share/cartographer/
 )
 
+
+export(TARGETS ${PROJECT_NAME} FILE "${CMAKE_BINARY_DIR}/${PROJECT_NAME}Targets.cmake")  # If there are several targets (e.g., several libraries), you need to list them all here
+
+export(PACKAGE ${PROJECT_NAME})
+
+
+
 # CPack debian package generation (target 'package')
 set(CPACK_PACKAGE_NAME "cartographer-h2t")
 set(CPACK_RPM_PACKAGE_GROUP "cartographer-h2t")
