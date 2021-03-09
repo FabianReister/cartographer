@@ -378,6 +378,12 @@ configure_package_config_file(
   INSTALL_DESTINATION ${CMAKE_INSTALL_PREFIX}/share/cartographer
 )
 
+configure_file(
+  cartographer-config-export.cmake.in
+  ${CMAKE_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+  @ONLY
+)
+
 install(
   EXPORT CartographerExport
   DESTINATION share/cartographer/cmake/
